@@ -103,6 +103,16 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
 .certs .btn{margin-top:12px;display:inline-flex;align-items:center}
 .certs .btn svg{width:16px;height:16px;margin-right:7px;flex:none}
 
+.contact{text-align:center}
+.contact p{margin-left:auto;margin-right:auto}
+.socials{list-style:none;margin:36px 0 0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:28px 40px}
+.socials a{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--muted);text-decoration:none;font-weight:500}
+.socials a:hover{color:var(--ink)}
+.tile{width:64px;height:64px;border-radius:16px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;transition:transform .2s}
+.socials a:hover .tile{transform:translateY(-4px)}
+.tile img,.tile svg{width:34px;height:34px}
+@media (prefers-reduced-motion:reduce){.tile{transition:none}}
+
 </style>
 </head>
 <body>
@@ -150,7 +160,7 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
       <!-- CHANGE: put a screenshot for each project in the repo as project-1.png ... project-6.png (same folder as index.html).
            CHANGE: replace each GitHub link with that project's repository link. -->
       <article class="proj">
-        <div class="shot"><span>Data Analysis and Visualization</span><img src="img/project1.png" alt="Online sales dashboard preview" onerror="this.remove()"></div>
+        <div class="shot"><span>Data Analysis and Visualization</span><img src="img/project1.jpg" alt="Online sales dashboard preview" onerror="this.remove()"></div>
         <div>
           <h3>Online Sales Performance and Strategy Analysis</h3>
           <p>End-to-end analysis of online sales transactions to find revenue gaps across regions and product categories, with an interactive Tableau dashboard of the key performance indicators.</p>
@@ -272,16 +282,18 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
       </ol>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact">
       <h2>Get in touch</h2>
       <p>I'm open to data analyst roles, freelance projects, and conversations about data. Send me a message and I'll reply as soon as I can.</p>
-      <div class="btns"><a class="btn primary" href="mailto:nicholasclvn@gmail.com">Email me</a></div>
-      <dl class="contact-list">
-        <div><dt>Email</dt><dd><a href="mailto:nicholasclvn@gmail.com">nicholasclvn@gmail.com</a></dd></div>
-        <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/nicholas-calvin-001dvorak" rel="noopener">linkedin.com/in/nicholas-calvin-001dvorak</a></dd></div>
-        <div><dt>GitHub</dt><dd><a href="https://github.com/nicho365" rel="noopener">github.com/nicho365</a></dd></div>
-        <div><dt>Location</dt><dd>Jakarta, Indonesia</dd></div>
-      </dl>
+      <ul class="socials">
+        <li><a href="mailto:nicholasclvn@gmail.com"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#16233B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email</a></li>
+        <li><a href="https://github.com/nicho365" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/github/github-original.svg" alt=""></span>GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/nicholas-calvin-001dvorak" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/linkedin/linkedin-original.svg" alt=""></span>LinkedIn</a></li>
+        <li><a href="https://huggingface.co/nichox0x0" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/huggingface/FF9D00" alt=""></span>Hugging Face</a></li>
+        <li><a href="https://x.com/NichoC10" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/x/000000" alt=""></span>X</a></li>
+        <li><a href="https://www.instagram.com/nicholas.clvn/" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/instagram/FF0069" alt=""></span>Instagram</a></li>
+        <li><a href="https://www.facebook.com/nicholas.depari.7" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/facebook/000000" alt=""></span>Faceboook</a></li>
+      </ul>
     </section>
   </main>
 
