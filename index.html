@@ -17,7 +17,9 @@
   --body:"IBM Plex Sans",system-ui,sans-serif;
   --pad:clamp(20px,5vw,64px);
 }
-:root[data-theme="dark"]{--bg:#1e3d58;--surface:#1e3d58;--ink:#e8eef1;--muted:#abd7f1;--line:#057dcd;--accent:#43b0f1;--accent-ink:#1e3d58;--link:#6dc0f1;color-scheme:dark}
+:root[data-theme="dark"]{
+  --bg:#1e3d58;--surface:#1e3d58;--ink:#e8eef1;--muted:#abd7f1;--line:#057dcd;
+  --accent:#43b0f1;--accent-ink:#1e3d58;--link:#6dc0f1;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body)}
@@ -113,13 +115,19 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
 .tile img,.tile svg{width:34px;height:34px}
 @media (prefers-reduced-motion:reduce){.tile{transition:none}}
 
+.hero{grid-template-columns:1fr}
+.bgfx{position:fixed;inset:0;width:100%;height:100%;border:0;z-index:-1;pointer-events:none;mix-blend-mode:multiply;opacity:.35}
+:root[data-theme="dark"] .bgfx{filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen;opacity:.3}
+@media print{.bgfx{display:none}}
+
 .tile,.ico{background:#e8eef1}
 .avatar{background:var(--accent);color:var(--accent-ink)}
 :focus-visible{outline-color:var(--link)}
-  
+
 </style>
 </head>
 <body>
+  <iframe class="bgfx" data-src="landscape.html" title="" aria-hidden="true" tabindex="-1"></iframe>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#">Nicholas Calvin</a>
@@ -154,8 +162,6 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
           <li>Python</li><li>SQL</li><li>Java</li><li>Tableau</li><li>Looker Studio</li><li>Power BI</li><li>Figma</li><li>Excel</li>
         </ul>
       </div>
-      <!-- CHANGE: add your photo to the repo as photo.jpg and it will appear here automatically -->
-      <div class="avatar"><span>NC</span><img src="photo.jpg" alt="Photo of Nicholas Calvin" onerror="this.remove()"></div>
     </section>
 
     <section id="projects">
@@ -296,11 +302,12 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
         <li><a href="https://huggingface.co/nichox0x0" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/huggingface/1e3d58" alt=""></span>Hugging Face</a></li>
         <li><a href="https://x.com/NichoC10" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/x/1e3d58" alt=""></span>X</a></li>
         <li><a href="https://www.instagram.com/nicholas.clvn/" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/instagram/1e3d58" alt=""></span>Instagram</a></li>
-        <li><a href="https://www.facebook.com/nicholas.depari.7" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/facebook/1e3d58" alt=""></span>Faceboook</a></li>
+        <li><a href="https://www.facebook.com/nicholas.depari.7" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/facebook/1e3d58" alt=""></span>Facebook</a></li>
       </ul>
     </section>
   </main>
 
+  <footer>Background art: <a href="https://github.com/LingDong-/shan-shui-inf" rel="noopener">{Shan, Shui}*</a> by Lingdong Huang.</footer>
 </div>
 
 <script>
@@ -327,6 +334,8 @@ document.querySelectorAll(".tags li,.contact-list dt, .proj .btn").forEach(funct
   img.onerror=function(){img.remove()};
   el.insertBefore(img,el.firstChild);
 });
+
+window.addEventListener("load",function(){setTimeout(function(){var f=document.querySelector(".bgfx");f.src=f.dataset.src},400)});
 </script>
 </body>
 </html>
