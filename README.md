@@ -15,6 +15,6 @@ img/ ----------- Project screenshots and images
 ```
 ## Credits
 
-- Background art: [{Shan, Shui}*](https://github.com/LingDong-/shan-shui-inf) by Lingdong Huang (MIT license)
+- Background art: [{Shan, Shui}*](https://github.com/LingDong-/shan-shui-inf) by Lingdong Huang
 - Technology logos: [Devicon](https://devicon.dev) and [Simple Icons](https://simpleicons.org), under their own licenses
 - Fonts: Bricolage Grotesque and IBM Plex Sans via Google Fonts
