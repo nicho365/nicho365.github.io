@@ -11,15 +11,13 @@
 <script>document.documentElement.setAttribute("data-theme",matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");</script>
 <style>
 :root{
-  --bg:#F2F2ED; --surface:#7CD5C7; --ink:#464B71; --muted:#118AB2; --line:#118AB2;
-  --accent:#464B71; --accent-ink:#464B71; --link:#118AB2;
+  --bg:#e8eef1; --surface:#bfdff1; --ink:#1e3d58; --muted:#1e3d58; --line:#96cff1;
+  --accent:#43b0f1; --accent-ink:#1e3d58; --link:#057dcd;
   --display:"Bricolage Grotesque",system-ui,sans-serif;
   --body:"IBM Plex Sans",system-ui,sans-serif;
   --pad:clamp(20px,5vw,64px);
 }
-:root[data-theme="dark"]{
-  --bg:#2a414d;--surface:#39515b;--ink:#ffffff;--muted:#d4c8b3;--line:#d4c8b3;
-  --accent:#706e59;--link:#8DB4FF;color-scheme:dark}
+:root[data-theme="dark"]{--bg:#1e3d58;--surface:#1e3d58;--ink:#e8eef1;--muted:#abd7f1;--line:#057dcd;--accent:#43b0f1;--accent-ink:#1e3d58;--link:#6dc0f1;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body)}
@@ -115,6 +113,10 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
 .tile img,.tile svg{width:34px;height:34px}
 @media (prefers-reduced-motion:reduce){.tile{transition:none}}
 
+.tile,.ico{background:#e8eef1}
+.avatar{background:var(--accent);color:var(--accent-ink)}
+:focus-visible{outline-color:var(--link)}
+  
 </style>
 </head>
 <body>
@@ -288,13 +290,13 @@ footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;border-top:1px sol
       <h2>Get in touch</h2>
       <p>I'm open to data analyst roles, freelance projects, and conversations about data. Send me a message and I'll reply as soon as I can.</p>
       <ul class="socials">
-        <li><a href="mailto:nicholasclvn@gmail.com"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#16233B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email</a></li>
+        <li><a href="mailto:nicholasclvn@gmail.com"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="#1e3d58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email</a></li>
         <li><a href="https://github.com/nicho365" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/github/github-original.svg" alt=""></span>GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/nicholas-calvin-001dvorak" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/linkedin/linkedin-original.svg" alt=""></span>LinkedIn</a></li>
-        <li><a href="https://huggingface.co/nichox0x0" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt=""></span>Hugging Face</a></li>
-        <li><a href="https://x.com/NichoC10" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/x/000000" alt=""></span>X</a></li>
-        <li><a href="https://www.instagram.com/nicholas.clvn/" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/instagram/FF0069" alt=""></span>Instagram</a></li>
-        <li><a href="https://www.facebook.com/nicholas.depari.7" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/facebook/1877F2" alt=""></span>Faceboook</a></li>
+        <li><a href="https://huggingface.co/nichox0x0" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/huggingface/1e3d58" alt=""></span>Hugging Face</a></li>
+        <li><a href="https://x.com/NichoC10" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/x/1e3d58" alt=""></span>X</a></li>
+        <li><a href="https://www.instagram.com/nicholas.clvn/" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/instagram/1e3d58" alt=""></span>Instagram</a></li>
+        <li><a href="https://www.facebook.com/nicholas.depari.7" target="_blank" rel="noopener"><span class="tile"><img src="https://cdn.simpleicons.org/facebook/1e3d58" alt=""></span>Faceboook</a></li>
       </ul>
     </section>
   </main>
